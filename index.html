@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Calculator</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#111;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .container{
+        background:#eee;
+        padding:20px;
+        width:900px;
+    }
+
+    .inputs{
+        display:flex;
+        gap:10px;
+        margin-bottom:60px;
+    }
+
+    input{
+        width:460px;
+        height:60px;
+        font-size:28px;
+        padding-left:10px;
+    }
+
+    .buttons{
+        display:flex;
+        justify-content:space-around;
+    }
+
+    button{
+        font-size:28px;
+        padding:10px 20px;
+        cursor:pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="inputs">
+        <input type="number" id="num1" placeholder="enter 1st Number">
+        <input type="number" id="num2" placeholder="enter 2nd Number">
+    </div>
+
+    <div class="buttons">
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+    </div>
+
+</div>
+
+<script>
+
+function add(){
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    alert(a + b);
+}
+
+function subtract(){
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    alert(a - b);
+}
+
+function multiply(){
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    alert(a * b);
+}
+
+function divide(){
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+
+    if(b==0){
+        alert("Cannot divide by zero");
+    }
+    else{
+        alert(a / b);
+    }
+}
+
+</script>
+
+</body>
+</html>
